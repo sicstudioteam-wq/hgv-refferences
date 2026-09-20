@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+
+<html lang="ms">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-M6RW4RD0X2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-M6RW4RD0X2');
+</script>
+
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>HGV Print House | Print &amp; Photostat Promo Calculator</title>
+<style>:root{
+--green:#009B4E;
+--green2:#0CBF62;
+--dark:#08351f;
+--ink:#111827;
+--muted:#64748b;
+--soft:#ecfff3;
+--line:#dbe7df;
+--orange:#ff8a00;
+--red:#ef233c;
+--yellow:#fff3c4;
+--card:#ffffff;
+--shadow:0 20px 55px rgba(6, 48, 28, .13);
+--radius:26px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+margin:0;
+font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+color:var(--ink);
+background:
+radial-gradient(circle at 0% 0%, rgba(12,191,98,.20), transparent 32%),
+radial-gradient(circle at 95% 8%, rgba(255,138,0,.12), transparent 27%),
+linear-gradient(180deg,#fbfffd 0%,#f3fff8 42%,#ffffff 100%);
+min-height:100vh;
+}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:inherit}
+.wrap{width:min(1240px,94vw);margin:auto}
+.topbar{
+position:sticky;top:0;z-index:20;
+backdrop-filter:blur(18px);
+background:rgba(255,255,255,.82);
+border-bottom:1px solid rgba(219,231,223,.75);
+}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.brand{display:flex;align-items:center;gap:13px}
+.brand img{height:45px;width:auto;object-fit:contain}
+.brand-text strong{display:block;font-size:17px;line-height:1;color:var(--dark)}
+.brand-text span{font-size:11px;font-weight:900;letter-spacing:1.7px;color:#667085;text-transform:uppercase}
+.nav-pills{display:flex;gap:9px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
+.nav-pill{
+display:inline-flex;align-items:center;gap:7px;
+padding:10px 13px;border-radius:999px;border:1px solid var(--line);
+background:#fff;font-size:13px;font-weight:900;color:#173929;
+box-shadow:0 8px 22px rgba(6,48,28,.06);
+}
+.nav-pill.hot{background:var(--green);color:#fff;border-color:transparent}
+.main{padding:28px 0 44px}
+.hero-layout{display:grid;grid-template-columns:1.03fr .97fr;gap:24px;align-items:start}
+.left-stack{display:grid;gap:18px}
+.hero-card,.calc-card,.info-card,.table-card{
+background:rgba(255,255,255,.96);
+border:1px solid rgba(219,231,223,.95);
+border-radius:var(--radius);
+box-shadow:var(--shadow);
+overflow:hidden;
+}
+.hero-card{position:relative;padding:22px 22px 0;min-height:565px}
+.hero-card:before{
+content:"";position:absolute;inset:0;
+background:
+radial-gradient(circle at 80% 20%, rgba(12,191,98,.16), transparent 28%),
+linear-gradient(135deg, rgba(236,255,243,.96), rgba(255,255,255,.78));
+pointer-events:none;
+}
+.hero-content{position:relative;z-index:1;display:grid;grid-template-columns:.96fr 1.04fr;gap:12px;align-items:center}
+.eyebrow{
+display:inline-flex;align-items:center;gap:8px;width:max-content;
+padding:9px 12px;border-radius:999px;background:#fff;color:var(--dark);
+border:1px solid #ccebd8;font-weight:950;font-size:13px;
+box-shadow:0 10px 24px rgba(6,48,28,.08);
+}
+.eyebrow i{width:10px;height:10px;background:var(--green);border-radius:50%;display:inline-block;box-shadow:0 0 0 6px rgba(12,191,98,.14)}
+h1{
+margin:14px 0 12px;
+font-size:clamp(38px,4.9vw,67px);
+line-height:.93;letter-spacing:-2.8px;color:#102217;
+}
+h1 .green{color:var(--green)}
+.lead{font-size:18px;line-height:1.45;color:#334155;margin:0 0 16px;max-width:540px}
+.lead b{color:var(--green)}
+.hook-strip{
+display:flex;gap:10px;align-items:center;flex-wrap:wrap;
+margin:16px 0;
+}
+.hook{
+background:#fff;border:1px solid #d8eadf;border-radius:16px;padding:12px 14px;
+font-weight:950;box-shadow:0 10px 24px rgba(6,48,28,.06);
+}
+.hook b{font-size:24px;color:var(--red);letter-spacing:-1px}
+.benefits{display:grid;gap:9px;margin:14px 0 0;max-width:390px}
+.benefit{
+display:grid;grid-template-columns:38px 1fr;align-items:center;gap:10px;
+background:rgba(255,255,255,.92);border:1px solid #d9eadf;border-radius:15px;padding:9px 10px;
+box-shadow:0 8px 18px rgba(6,48,28,.05);
+font-weight:850;
+}
+.benefit .num{
+width:34px;height:34px;border-radius:12px;background:var(--green);color:#fff;
+display:grid;place-items:center;font-weight:1000;
+}
+.hero-visual{position:relative;min-height:438px;display:flex;align-items:end;justify-content:center}
+.visual-bg{
+position:absolute;inset:8px 0 18px;border-radius:30px;
+background:
+linear-gradient(180deg, rgba(255,255,255,.45), rgba(219,248,230,.75)),
+radial-gradient(circle at 50% 20%, #ffffff, #dff7e8 64%);
+border:1px solid #d7eedf;
+}
+.person-card{
+position:relative;z-index:2;width:min(360px,100%);height:385px;border-radius:34px 34px 0 0;
+background:linear-gradient(180deg,#f6fff9,#cdf5db);
+display:flex;align-items:flex-end;justify-content:center;overflow:hidden;
+border:1px solid #ccebd8;border-bottom:0;
+}
+.person{position:relative;width:260px;height:335px;margin-bottom:-2px}
+.head{position:absolute;left:78px;top:10px;width:105px;height:122px;border-radius:52% 48% 48% 52%;background:#e3b88b;box-shadow:0 0 0 18px #96a66f}
+.face{position:absolute;left:92px;top:47px;width:75px;height:68px;border-radius:50%;background:#f1c49b}
+.face:before,.face:after{content:"";position:absolute;top:24px;width:7px;height:7px;background:#1f2937;border-radius:50%}
+.face:before{left:19px}.face:after{right:19px}
+.smile{position:absolute;left:27px;top:46px;width:24px;height:10px;border-bottom:3px solid #7c2d12;border-radius:0 0 20px 20px}
+.body{position:absolute;left:48px;top:128px;width:165px;height:210px;border-radius:56px 56px 20px 20px;background:#111827;box-shadow:inset 0 0 0 1px rgba(255,255,255,.10)}
+.body:after{content:"HGV";position:absolute;right:23px;top:31px;color:#9ee27b;font-weight:1000;font-size:17px}
+.arm-l,.arm-r{position:absolute;top:181px;width:63px;height:115px;background:#111827;border-radius:35px;z-index:2}
+.arm-l{left:20px;transform:rotate(16deg)}.arm-r{right:20px;transform:rotate(-16deg)}
+.flyer{
+position:absolute;z-index:3;width:105px;height:150px;border-radius:8px;background:#fff;
+box-shadow:0 12px 28px rgba(6,48,28,.18);border:1px solid rgba(0,0,0,.06);overflow:hidden;
+}
+.flyer:before{content:"";position:absolute;inset:0 0 auto;height:48px;background:var(--green)}
+.flyer:after{content:"PROMO";position:absolute;left:9px;top:14px;color:#fff;font-weight:1000;font-size:14px}
+.flyer.one{left:18px;bottom:58px;transform:rotate(-11deg)}
+.flyer.two{left:82px;bottom:42px;transform:rotate(4deg);background:#fff7e8}
+.flyer.two:before{background:var(--orange)}
+.flyer.three{right:24px;bottom:55px;transform:rotate(12deg);background:#fef2f2}
+.flyer.three:before{background:#ef233c}
+.cta-bar{
+position:relative;z-index:5;margin:4px 0 0;
+background:linear-gradient(135deg,var(--green),#00783b);color:#fff;border-radius:22px;
+padding:16px 18px;display:grid;grid-template-columns:50px 1fr auto;gap:12px;align-items:center;
+box-shadow:0 16px 34px rgba(0,155,78,.27);
+}
+.wa-icon{width:50px;height:50px;border-radius:16px;background:rgba(255,255,255,.16);display:grid;place-items:center;font-size:28px}
+.cta-bar small{display:block;opacity:.88;font-weight:750}
+.cta-bar b{font-size:19px}
+.arrow{font-size:31px;font-weight:800}
+.trust-row{
+position:relative;z-index:3;display:grid;grid-template-columns:repeat(4,1fr);gap:0;
+background:#fff;margin:14px 0 0;border-radius:20px 20px 0 0;border:1px solid #e0eee4;border-bottom:0;
+overflow:hidden;
+}
+.trust{padding:14px 12px;border-right:1px solid #edf2ee}
+.trust:last-child{border-right:0}
+.trust b{display:block;font-size:13px;color:#153723}
+.trust span{font-size:11px;color:#667085;font-weight:700}
+.promo-image-card{
+position:relative;
+background:linear-gradient(135deg,#ffffff 0%,#f2fff7 100%);
+border:1px solid rgba(173,232,198,.95);
+border-radius:var(--radius);
+box-shadow:var(--shadow);
+padding:14px;
+overflow:hidden;
+}
+.promo-image-card:before{
+content:"HOT PROMO";
+position:absolute;right:18px;top:18px;z-index:2;
+background:linear-gradient(135deg,#ff8a00,#ffb000);
+color:#fff;border-radius:999px;padding:8px 12px;
+font-size:11px;font-weight:1000;letter-spacing:.6px;
+box-shadow:0 10px 25px rgba(255,138,0,.22);
+}
+.promo-image-card img{
+display:block;width:100%;height:auto;border-radius:20px;
+box-shadow:0 12px 34px rgba(8,53,31,.12);
+}
+.promo-image-caption{
+margin-top:11px;display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;
+font-weight:1000;color:var(--dark);font-size:14px;
+}
+.promo-image-caption span{color:#e11d48}
+.promo-image-caption a{
+display:inline-flex;align-items:center;justify-content:center;gap:8px;
+padding:10px 14px;border-radius:999px;background:var(--green);color:#fff;
+box-shadow:0 10px 24px rgba(0,155,78,.20);
+font-size:13px;
+}
+.thumbs{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.thumb{background:#fff;border:1px solid #dcebe1;border-radius:18px;padding:10px;box-shadow:0 10px 25px rgba(6,48,28,.07);min-height:94px;position:relative;overflow:hidden}
+.thumb:before{content:"";position:absolute;right:-22px;top:-25px;width:70px;height:70px;border-radius:50%;background:rgba(12,191,98,.14)}
+.thumb b{display:block;color:#0a612e;font-size:14px;line-height:1.1;margin-bottom:7px;position:relative}
+.thumb span{font-size:12px;color:#667085;font-weight:750;line-height:1.25;position:relative}
+.thumb em{position:absolute;right:8px;bottom:8px;width:26px;height:26px;border-radius:50%;background:#f4fff8;border:1px solid #cfe8d9;display:grid;place-items:center;color:var(--green);font-style:normal;font-weight:1000}
+.info-card{padding:18px}
+.info-head{display:flex;align-items:center;justify-content:space-between;gap:14px;border-bottom:1px solid #e7f0ea;padding-bottom:12px;margin-bottom:14px}
+.info-head h2{margin:0;font-size:23px;color:#0a612e;letter-spacing:-.7px}
+.info-head span{font-size:13px;color:#667085;font-weight:800}
+.material-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:14px;align-items:stretch}
+.guide-copy{background:linear-gradient(135deg,#f2fff6,#fff);border:1px solid #d7eadf;border-radius:20px;padding:20px}
+.guide-copy h3{font-size:31px;line-height:1;margin:0 0 10px;color:#08351f;letter-spacing:-1.2px}
+.guide-copy p{margin:0 0 14px;color:#5c6675;line-height:1.45}
+.mini-btn{display:inline-flex;gap:8px;align-items:center;background:#fff;border:1px solid #cfe7d8;border-radius:12px;padding:11px 13px;color:#0a612e;font-weight:950}
+.sample-stack{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.sample{height:174px;border-radius:16px;box-shadow:0 12px 24px rgba(6,48,28,.12);padding:12px;display:flex;align-items:end;color:#fff;font-weight:1000;background:linear-gradient(135deg,#1f2937,#0a612e);position:relative;overflow:hidden}
+.sample:before{content:"";position:absolute;inset:12px 12px auto;height:55px;border-radius:12px;background:rgba(255,255,255,.18)}
+.sample:nth-child(2){background:linear-gradient(135deg,#0a612e,#129e55)}
+.sample:nth-child(3){background:linear-gradient(135deg,#8b5e34,#26331f)}
+.sample span{position:relative;font-size:15px;line-height:1.1;text-shadow:0 2px 8px rgba(0,0,0,.25)}
+.calc-card{padding:22px;position:sticky;top:95px}
+.promo-head{
+background:linear-gradient(135deg,#eafff0,#ffffff);
+border:1px solid #ade8c6;border-radius:22px;padding:18px;margin-bottom:18px;
+position:relative;overflow:hidden;
+}
+.promo-head:before{content:"PROMOSI";position:absolute;right:-31px;top:18px;transform:rotate(36deg);background:var(--orange);color:#fff;padding:6px 36px;font-size:11px;font-weight:1000;letter-spacing:.8px}
+.stars{font-size:13px;color:#ff9900;font-weight:1000;margin-bottom:4px}
+.price-row{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.live-price{font-size:clamp(46px,5vw,63px);font-weight:1000;color:var(--green);letter-spacing:-2.8px;line-height:1}
+.badge{display:inline-flex;align-items:center;gap:7px;border-radius:999px;padding:8px 12px;font-weight:1000;font-size:12px;background:var(--green);color:#fff}
+.promo-text{font-size:13px;color:#334155;line-height:1.45;margin:9px 0 0;max-width:620px}
+.form{display:grid;gap:14px}
+.row{display:grid;grid-template-columns:135px 1fr;gap:12px;align-items:center}
+.row label{font-weight:900;color:#1f2937;font-size:14px}
+.seg{display:flex;gap:8px;flex-wrap:wrap}
+.seg button{
+border:1px solid #d6e3dc;background:#fff;border-radius:13px;min-width:90px;padding:12px 14px;
+font-weight:1000;color:#0f172a;cursor:pointer;box-shadow:0 7px 15px rgba(6,48,28,.04);
+transition:.15s ease;
+}
+.seg button small{display:block;font-size:10px;color:#667085;font-weight:850;margin-top:2px}
+.seg button.active{background:#effff4;border-color:var(--green);color:var(--green);box-shadow:0 0 0 3px rgba(0,155,78,.08)}
+.qty-box{display:grid;grid-template-columns:42px 1fr 42px 72px;max-width:390px;border:1px solid #d6e3dc;border-radius:13px;overflow:hidden;background:#fff}
+.qty-box button{border:0;background:#f7fbf8;font-size:22px;font-weight:1000;cursor:pointer}
+.qty-box input{border:0;outline:0;text-align:center;font-weight:1000;padding:13px 6px;min-width:0}
+.qty-box span{display:grid;place-items:center;border-left:1px solid #e6eee9;background:#f7fbf8;font-weight:850;color:#334155}
+select,textarea{
+width:100%;border:1px solid #d6e3dc;border-radius:13px;background:#fff;padding:13px 14px;outline:0;font-weight:850;color:#111827;
+}
+textarea{min-height:68px;resize:vertical;line-height:1.4}
+select:focus,textarea:focus,input:focus{border-color:var(--green);box-shadow:0 0 0 3px rgba(0,155,78,.10)}
+.hint{font-size:12px;color:#667085;margin-top:-5px;margin-left:147px;font-weight:750;line-height:1.35}
+.total-bar{
+margin-top:16px;background:linear-gradient(135deg,var(--green),#007539);color:#fff;border-radius:17px;
+padding:18px;display:flex;align-items:center;justify-content:space-between;gap:14px;
+box-shadow:0 16px 34px rgba(0,155,78,.22);
+}
+.total-bar small{display:block;opacity:.86;font-weight:800}
+.total-bar b{font-size:39px;letter-spacing:-1.6px}
+.actions{display:grid;grid-template-columns:1.1fr .9fr;gap:10px;margin-top:12px}
+.btn{
+border:0;border-radius:15px;padding:15px 16px;font-weight:1000;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:10px;
+transition:.15s transform,.15s box-shadow;
+}
+.btn:hover{transform:translateY(-1px)}
+.btn.green{background:var(--green2);color:#fff;box-shadow:0 12px 24px rgba(12,191,98,.22)}
+.btn.white{background:#fff;border:1px solid #d6e3dc;color:#111827}
+.breakdown{display:grid;gap:8px;margin-top:14px;background:#f8fffa;border:1px solid #e2f0e7;border-radius:18px;padding:14px}
+.bline{display:flex;justify-content:space-between;gap:10px;font-size:13px;color:#475569;font-weight:850;border-bottom:1px dashed #d9e7df;padding-bottom:8px}
+.bline:last-child{border-bottom:0;padding-bottom:0}
+.bline b{color:#111827}
+.micro-trust{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:12px}
+.micro{background:#fff;border:1px solid #e0eae4;border-radius:14px;padding:10px;text-align:center}
+.micro b{font-size:12px;display:block;color:#183a26}
+.micro span{font-size:10px;color:#64748b;font-weight:750}
+.below{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:22px}
+.table-card{padding:18px}
+.table-card h2{margin:0 0 4px;font-size:26px;letter-spacing:-.9px;color:#0a612e}
+.table-card p{margin:0 0 12px;color:#667085;font-size:13px;font-weight:750}
+table{width:100%;border-collapse:collapse;overflow:hidden;border-radius:16px}
+th,td{padding:12px 13px;text-align:left;border-bottom:1px solid #edf2ee;font-size:14px}
+th{background:#f3fbf6;color:#475569;font-size:11px;text-transform:uppercase;letter-spacing:.7px}
+td:last-child,th:last-child{text-align:right}
+.promo-rate{color:var(--red);font-weight:1000;font-size:17px}
+.hotrow{background:#fff8e6}
+.old{text-decoration:line-through;color:#94a3b8;font-weight:800}
+.note{font-size:12px;color:#64748b;line-height:1.55;margin-top:10px;font-weight:700}
+.final-cta{
+margin:24px 0 0;padding:24px;border-radius:28px;background:linear-gradient(135deg,#0a612e,var(--green));
+color:#fff;display:grid;grid-template-columns:1fr auto;gap:18px;align-items:center;box-shadow:0 20px 45px rgba(0,155,78,.22);
+}
+.final-cta h2{margin:0 0 6px;font-size:34px;letter-spacing:-1.1px}
+.final-cta p{margin:0;opacity:.9;font-weight:800}
+.floating{position:fixed;right:18px;bottom:18px;z-index:30;background:#25d366;color:#07180e;border-radius:999px;padding:13px 17px;font-weight:1000;box-shadow:0 14px 35px rgba(37,211,102,.32)}
+.toast{position:fixed;left:50%;bottom:22px;transform:translateX(-50%) translateY(90px);background:#111827;color:#fff;padding:13px 16px;border-radius:13px;z-index:50;font-weight:850;box-shadow:0 16px 35px rgba(0,0,0,.24);transition:.25s ease}
+.toast.show{transform:translateX(-50%) translateY(0)}
+@media(max-width:980px){
+.hero-layout{grid-template-columns:1fr}
+.calc-card{position:relative;top:0}
+.hero-content{grid-template-columns:1fr}
+.hero-visual{min-height:380px}
+.below{grid-template-columns:1fr}
+.material-grid{grid-template-columns:1fr}
+}
+@media(max-width:720px){
+.nav{height:auto;padding:12px 0;align-items:flex-start}
+.nav-pills .nav-pill:not(.hot){display:none}
+.hero-card{padding:17px 17px 0}
+.row{grid-template-columns:1fr;gap:7px}
+.hint{margin-left:0}
+.seg button{flex:1;min-width:96px}
+.actions,.final-cta{grid-template-columns:1fr}
+.trust-row,.micro-trust,.thumbs,.sample-stack{grid-template-columns:1fr 1fr}
+.total-bar{align-items:flex-start;flex-direction:column}
+.total-bar b{font-size:34px}
+h1{font-size:44px}
+}
+@media(max-width:420px){.trust-row,.thumbs,.sample-stack,.micro-trust{grid-template-columns:1fr}}
+@media print{
+.topbar,.actions,.floating,.final-cta,.hero-card,.thumbs,.info-card{display:none!important}
+body{background:#fff}
+.hero-layout,.below{display:block}
+.calc-card,.table-card{box-shadow:none;border:1px solid #ddd;margin-bottom:16px}
+}
+.left-stack{gap:0;}
+.promo-image-card{padding:18px;position:sticky;top:95px;}
+.promo-image-card:before{display:none!important;}
+.promo-image-card img{border-radius:22px;box-shadow:0 18px 42px rgba(8,53,31,.14);}
+@media(max-width:980px){.promo-image-card{position:relative;top:auto;}}
+.row.hidden{display:none!important;}
+.seg button.hidden-size{display:none!important;}
+.hint.service-note{
+background:#f0fff5;
+border:1px dashed #9adfba;
+color:#0b5b31;
+padding:10px 12px;
+border-radius:12px;
+margin-top:-2px;
+}
+.promo-thumbs-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:12px}
+.promo-thumb{padding:0;border:2px solid #e3ebe4;border-radius:10px;overflow:hidden;background:#fff;cursor:pointer;aspect-ratio:1/1;transition:.2s}
+.promo-thumb.active{border-color:#16a34a;box-shadow:0 4px 12px rgba(22,163,74,.2)}
+.promo-thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.promo-thumb:hover{border-color:#16a34a}
+#mainPromoImg{width:100%;height:auto;display:block;border-radius:12px}
+.promo-image-card{padding:12px}
+@media(max-width:720px){
+.promo-thumbs-grid{grid-template-columns:repeat(5,1fr);gap:6px}
+}
+@media(max-width:420px){
+.promo-thumbs-grid{grid-template-columns:repeat(3,1fr);gap:6px}
+.promo-thumb{border-width:1.5px;border-radius:8px}
+}</style>
+<style id="hgv-standard-ui-v103">body{
+font-family:"Nunito","Segoe UI",-apple-system,BlinkMacSystemFont,Arial,sans-serif !important;
+line-height:1.55;
+-webkit-font-smoothing:antialiased;
+text-rendering:optimizeLegibility;
+}
+.btn,
+.cta,
+.product-btn,
+.card-btn,
+.order-btn,
+.btn-wa,
+.btn-order,
+.btn-quote,
+.cta-bottom-btn,
+.cta-btn,
+.wa-order-btn,
+.cart-btn,
+.pick-btn,
+.cat-home-btn,
+.admin-btn{
+box-sizing:border-box !important;
+min-height:48px !important;
+padding:12px 20px !important;
+font-family:"Nunito","Segoe UI",Arial,sans-serif !important;
+font-size:15px !important;
+font-weight:800 !important;
+line-height:1.3 !important;
+border-radius:12px !important;
+text-align:center !important;
+align-content:center;
+cursor:pointer;
+}
+.btn,.cta,.card-btn,.btn-wa,.cta-bottom-btn,.back-btn{
+align-items:center !important;
+justify-content:center !important;
+gap:8px;
+}
+.btn-opt,
+.option-btn{
+box-sizing:border-box !important;
+min-height:40px !important;
+padding:8px 14px !important;
+font-size:14px !important;
+font-weight:700 !important;
+border-radius:10px !important;
+line-height:1.2 !important;
+}
+.qty-btn{
+width:40px !important;
+height:40px !important;
+min-height:0 !important;
+padding:0 !important;
+font-size:18px !important;
+font-weight:800 !important;
+border-radius:10px !important;
+display:inline-flex !important;
+align-items:center !important;
+justify-content:center !important;
+}
+.btn-copy{
+min-height:36px !important;
+padding:6px 12px !important;
+font-size:13px !important;
+font-weight:700 !important;
+border-radius:8px !important;
+}
+#hgv-backbar a,
+.back-btn{
+box-sizing:border-box !important;
+min-height:40px !important;
+padding:9px 16px !important;
+font-size:14px !important;
+font-weight:800 !important;
+border-radius:10px !important;
+line-height:1.2 !important;
+}
+.follow-btn{
+width:40px !important;
+height:40px !important;
+border-radius:50% !important;
+padding:0 !important;
+min-height:0 !important;
+}
+.carousel-btn{
+width:42px !important;
+height:42px !important;
+border-radius:50% !important;
+font-size:18px !important;
+}
+p{line-height:1.6;}</style>
+
+<!-- ========== SEO META (HGV Print House) ========== -->
+<meta name="description" content="Fotostat B/W dari 30 sen, colour print A4/A3. Laminate A7-A3 dari RM1. Print buku, sijil, dokumen. Walk-in di Bandar Perda BM.">
+<meta name="keywords" content="kedai printing near me, kedai printing bukit mertajam, printing shop penang, cetak sticker penang, print banner bukit mertajam, print nametag murah, cop rasmi penang, business card printing bukit mertajam, printing shop near me Bandar Perda, HGV Print House">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="author" content="HGV Print House">
+<meta name="geo.region" content="MY-07">
+<meta name="geo.placename" content="Bukit Mertajam, Penang">
+<meta name="geo.position" content="5.363889;100.463889">
+<meta name="ICBM" content="5.363889, 100.463889">
+
+<!-- ========== Open Graph (Facebook / WhatsApp / TikTok bio) ========== -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="HGV Print House">
+<meta property="og:title" content="Fotostat & Print A4/A3 Murah — HGV Print House Bukit Mertajam">
+<meta property="og:description" content="Fotostat B/W dari 30 sen, colour print A4/A3. Laminate A7-A3 dari RM1. Print buku, sijil, dokumen. Walk-in di Bandar Perda BM.">
+<meta property="og:url" content="https://hgvprints.com/fotostat-print/index.html">
+<meta property="og:image" content="https://hgvprints.com/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="HGV Print House — Kedai Printing di Bukit Mertajam, Penang">
+<meta property="og:locale" content="ms_MY">
+
+<!-- ========== Twitter / X Card ========== -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Fotostat & Print A4/A3 Murah — HGV Print House Bukit Mertajam">
+<meta name="twitter:description" content="Fotostat B/W dari 30 sen, colour print A4/A3. Laminate A7-A3 dari RM1. Print buku, sijil, dokumen. Walk-in di Bandar Perda BM.">
+<meta name="twitter:image" content="https://hgvprints.com/assets/og-image.jpg">
+
+<!-- ========== Canonical ========== -->
+<link rel="canonical" href="https://hgvprints.com/fotostat-print/index.html">
+
+<!-- ========== Favicon ========== -->
+<link rel="icon" type="image/png" href="/assets/hgv-brand-square.jpg">
+<link rel="apple-touch-icon" href="/assets/hgv-brand-square.jpg">
+<!-- ========== End SEO ========== -->
+</head>
+<body>
+
+<div id="hgv-topbar" style="background:#fff;border-bottom:2px solid #e6f2e8;position:sticky;top:0;z-index:9999;">
+  <div style="max-width:1200px;margin:0 auto;padding:10px 20px;display:flex;align-items:center;gap:12px;">
+    <a href="../index.html" style="text-decoration:none;flex-shrink:0;display:flex;align-items:center;">
+      <img src="../assets/hgv-logo.png" alt="HGV Print House" style="height:36px;width:auto;display:block;">
+    </a>
+  </div>
+</div>
+<div id="hgv-backbar" style="max-width:1200px;margin:0 auto;padding:16px 20px 0;display:flex;gap:10px;flex-wrap:wrap"><a href="../index.html" style="display:inline-flex;align-items:center;gap:8px;background:#fff;border:1.5px solid #bbf7d0;border-radius:10px;padding:9px 18px;font-size:13px;font-weight:900;color:#1b2c22;border-left:4px solid #16a34a;text-decoration:none"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>Website Main</a></div>
+<main class="main wrap">
+<section class="hero-layout">
+<div class="left-stack">
+
+<article aria-label="Promo print dan fotostat HGV" class="promo-image-card">
+<img id="mainPromoImg" alt="Promo HGV Print House Print & Fotostat" src="images/promo-fotostat-8sen.webp"/ loading="lazy" decoding="async">
+</article>
+
+<div class="promo-thumbs-grid">
+  <button class="promo-thumb active" onclick="setPromoImg(this,'images/promo-fotostat-8sen.webp')"><img src="images/promo-fotostat-8sen.webp" alt="Fotostat 8 Sen" loading="lazy" decoding="async"></button>
+  <button class="promo-thumb" onclick="setPromoImg(this,'images/promo-print-banyak.webp')"><img src="images/promo-print-banyak.webp" alt="Print Banyak" loading="lazy" decoding="async"></button>
+  <button class="promo-thumb" onclick="setPromoImg(this,'images/promo-kenapa-hgv.webp')"><img src="images/promo-kenapa-hgv.webp" alt="Kenapa HGV" loading="lazy" decoding="async"></button>
+  <button class="promo-thumb" onclick="setPromoImg(this,'images/promo-sedia-bantu.webp')"><img src="images/promo-sedia-bantu.webp" alt="Sedia Membantu" loading="lazy" decoding="async"></button>
+  <button class="promo-thumb" onclick="setPromoImg(this,'images/promo-warna-55sen.webp')"><img src="images/promo-warna-55sen.webp" alt="Print Warna 55 Sen" loading="lazy" decoding="async"></button>
+</div>
+
+<script>
+function setPromoImg(btn, src){
+  document.getElementById('mainPromoImg').src = src;
+  document.querySelectorAll('.promo-thumb').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+}
+</script>
+
+
+</div>
+<aside class="calc-card" id="calculator">
+<div class="promo-head">
+<div class="stars">★★★★★   HGV Print House • Promo Calculator</div>
+<div class="price-row"><div class="live-price" id="heroPrice">RM320.00</div><span class="badge" id="heroBadge">8 sen / side</span></div>
+<p class="promo-text" id="heroDesc">Fotostat Hitam Putih A4, 4000 side, Simili 70gsm included. Harga terus kira ikut tier promo.</p>
+</div>
+<div class="form">
+<div class="row">
+<label>Jenis Servis</label>
+<div class="seg" data-key="service">
+<button class="active" data-value="photostat">Fotostat<small>copy dokumen</small></button>
+<button data-value="digital">Digital Print<small>file PDF/design</small></button>
+</div>
+</div>
+<div class="row">
+<label>Warna</label>
+<div class="seg" data-key="color">
+<button class="active" data-value="bw">Hitam Putih<small>promo bulk</small></button>
+<button data-value="color">Color<small>warna penuh</small></button>
+</div>
+</div>
+<div class="row">
+<label>Saiz</label>
+<div class="seg" data-key="size">
+<button data-value="A6">A6<small>105×148mm</small></button>
+<button data-value="A5">A5<small>148×210mm</small></button>
+<button class="active" data-value="A4">A4<small>210×297mm</small></button>
+<button data-value="B5">B5<small>176×250mm</small></button>
+<button data-value="B4">B4<small>250×353mm</small></button>
+<button data-value="A3">A3<small>297×420mm</small></button>
+<button data-value="A3+">A3+<small>12×18 inch</small></button>
+</div>
+</div>
+<div class="row">
+<label>Print</label>
+<div class="seg" data-key="sides">
+<button class="active" data-value="1">1 Side<small>depan sahaja</small></button>
+<button data-value="2">2 Sides<small>depan belakang</small></button>
+</div>
+</div>
+<div class="row">
+<label>Kuantiti</label>
+<div class="qty-box">
+<button id="minus" type="button">−</button>
+<input id="qty" inputmode="numeric" min="1" step="1" type="number" value="4000"/>
+<button id="plus" type="button">+</button>
+<span>pcs</span>
+</div>
+</div>
+<div class="hint" id="qtyHint">Kiraan side = kuantiti × side. Lagi banyak side, harga per side makin murah.</div>
+<div class="hint service-note" id="serviceHint">Fotostat hanya untuk A4/B5/A3. Untuk A6/A5, pilih Digital Print.</div>
+<div class="row" id="materialRow">
+<label>Material</label>
+<div class="seg" data-key="material">
+<button class="active" data-value="0">Simili<small>70gsm included</small></button>
+<button data-value="0.20">Simili 80–100<small>+RM0.20/sheet</small></button>
+<button data-value="0.50">Art Paper<small>+RM0.50/sheet</small></button>
+<button data-value="1.00">Art Card<small>+RM1.00/sheet</small></button>
+<button data-value="1.50">Ivory<small>+RM1.50/sheet</small></button>
+</div>
+</div>
+<div class="row">
+<label>Masa Siap</label>
+<div class="seg" data-key="urgent">
+<button class="active" data-value="0">Normal<small>2-3 hari</small></button>
+<button data-value="0.30">Urgent<small>24 jam +30%</small></button>
+</div>
+</div>
+<div class="row" id="designRow">
+<label>Design / Setting</label>
+<select id="design">
+<option value="0">RM0 — Artwork ready / file ready print</option>
+<option value="5">RM5 — Susun simple A6/A5 atas A4</option>
+<option value="30">RM30 — Setting file / edit ringan</option>
+<option value="80">RM80 — Design HGV simple</option>
+<option value="150">RM150 — Design premium / menu / corporate</option>
+</select>
+</div>
+<div class="row">
+<label>Finishing</label>
+<select id="finishing">
+<option value="0">Tiada finishing</option>
+<option value="5">Potong petak / trim — RM5 per job</option>
+<option value="lam:A7">Laminate A7 (business card) — dari RM1.00/pcs</option>
+<option value="lam:A6">Laminate A6 — dari RM1.00/pcs</option>
+<option value="lam:A5">Laminate A5 — dari RM1.00/pcs</option>
+<option value="lam:A4">Laminate A4 — dari RM2.50/pcs</option>
+<option value="lam:A3">Laminate A3 — dari RM5.00/pcs</option>
+</select>
+</div>
+<div class="row">
+<label>Catatan</label>
+<textarea id="note" placeholder="Contoh: Print nota kelas, 2 side, nak siap normal, file PDF ready."></textarea>
+</div>
+</div>
+<div class="total-bar"><span><strong>Total</strong><small id="totalNote">Termasuk harga print + add-on pilihan</small></span><b id="total">RM320.00</b></div>
+<div class="actions">
+<button class="btn green" id="waBtn" type="button">Order via WhatsApp</button>
+<button class="btn white" id="copyBtn" type="button">Copy Quote</button>
+</div>
+<div class="breakdown">
+<div class="bline"><span>Harga per side</span><b id="unitPrice">RM0.08</b></div>
+<div class="bline"><span>Jumlah side / impression</span><b id="sideCount">4,000</b></div>
+<div class="bline"><span>Subtotal print</span><b id="printSub">RM320.00</b></div>
+<div class="bline"><span>Add-on material</span><b id="matSub">RM0.00</b></div>
+<div class="bline"><span>Finishing</span><b id="finishSub">RM0.00</b></div>
+<div class="bline"><span>Urgent</span><b id="urgentSub">RM0.00</b></div>
+<div class="bline"><span>Design / setting</span><b id="designSub">RM0.00</b></div>
+<div class="bline"><span>Anggaran jimat</span><b id="saveSub">RM680.00</b></div>
+</div>
+<div class="micro-trust">
+<div class="micro"><b>Harga Telus</b><span>tiada caj tersembunyi</span></div>
+<div class="micro"><b>Quote Cepat</b><span>copy &amp; WhatsApp</span></div>
+<div class="micro"><b>Bulk Murah</b><span>lagi banyak lagi jimat</span></div>
+<div class="micro"><b>Support</b><span>team HGV bantu</span></div>
+</div>
+</aside>
+</section>
+
+
+</main>
+<a class="floating" href="https://wa.me/60195485227?text=Hi%20HGV%2C%20saya%20nak%20order%20Print%20%26%20Photostat" target="_blank">WhatsApp</a>
+<div class="toast" id="toast">Quotation berjaya copy.</div>
+<script>
+    const state = { service:'photostat', color:'bw', size:'A4', sides:'1', material:'0', urgent:'0' };
+    const serviceNames = { photostat:'Fotostat', digital:'Digital Print' };
+    const colorNames = { bw:'Hitam Putih', color:'Color' };
+
+    // Saiz kecil untuk Digital Print dikira ikut A4 equivalent.
+    // A5 = 2 pcs atas A4, A6 = 4 pcs atas A4.
+    const sizeMultiplier = { 'A6':0.25, 'A5':0.50, 'A4':1, 'B5':1, 'B4':1.8, 'A3':2, 'A3+':2.4 };
+    const allowedSizes = {
+      photostat:['A4','B5','A3'],
+      digital:['A6','A5','A4','B5','B4','A3','A3+']
+    };
+    const materialNames = { '0':'Simili 70gsm', '0.20':'Simili 80–100gsm', '0.50':'Art Paper', '1.00':'Art Card', '1.50':'Ivory Card' };
+    let latestQuote = '';
+
+    function rm(n) { return 'RM' + Number(n).toFixed(2); }
+    function number(n) { return Number(n).toLocaleString('ms-MY'); }
+    function unitLabel(n) { return n < 1 ? Math.round(n * 100) + ' sen / side' : rm(n) + ' / side'; }
+
+    function bwPromo(q, service) {
+      if (service === 'photostat') {
+        if (q <= 10) return 0.30;
+        if (q <= 100) return 0.20;
+        if (q <= 500) return 0.15;
+        if (q <= 1000) return 0.12;
+        if (q <= 2000) return 0.10;
+        if (q <= 3999) return 0.09;
+        return 0.08;
+      }
+      if (q <= 10) return 0.50;
+      if (q <= 100) return 0.40;
+      if (q <= 300) return 0.30;
+      if (q <= 999) return 0.25;
+      if (q <= 1999) return 0.18;
+      if (q <= 3999) return 0.12;
+      return 0.08;
+    }
+    function bwNormal(q) {
+      if (q <= 10) return 0.50;
+      if (q <= 100) return 0.40;
+      if (q <= 300) return 0.30;
+      return 0.25;
+    }
+    function colorPromo(q) {
+      if (q <= 10) return 1.50;
+      if (q <= 100) return 1.40;
+      if (q <= 299) return 1.00;
+      return 0.55;
+    }
+    function colorNormal(q) {
+      if (q <= 10) return 1.50;
+      if (q <= 100) return 1.40;
+      if (q <= 1000) return 1.30;
+      return 1.00;
+    }
+    function getUnit(q) {
+      const base = state.color === 'bw' ? bwPromo(q, state.service) : colorPromo(q);
+      const normal = state.color === 'bw' ? bwNormal(q) : colorNormal(q);
+      const mult = sizeMultiplier[state.size] || 1;
+      return { promo:base * mult, normal:normal * mult, mult };
+    }
+
+    const LAMINATE_TIERS = {
+      A7:[[49,1.00],[99,0.80],[Infinity,0.60]],
+      A6:[[49,1.00],[99,0.80],[Infinity,0.60]],
+      A5:[[49,1.00],[99,0.80],[Infinity,0.60]],
+      A4:[[49,2.50],[99,2.00],[Infinity,1.80]],
+      A3:[[49,5.00],[99,4.50],[Infinity,4.00]]
+    };
+    function lamRate(size, q){ for (const [max,rate] of LAMINATE_TIERS[size]) { if (q <= max) return rate; } }
+    function getFinishCost(qty, mult) {
+      const val = document.getElementById('finishing').value || '0';
+      const txt = document.getElementById('finishing').selectedOptions[0].textContent;
+      if (val === '0') return { cost:0, label:'Tiada finishing' };
+      if (val.startsWith('lam:')) {
+        const size = val.split(':')[1];
+        const rate = lamRate(size, qty);
+        return { cost:rate * qty, label:'Laminate ' + size + ' — RM' + rate.toFixed(2) + '/pcs × ' + qty };
+      }
+      const f = parseFloat(val);
+      if (txt.includes('per job')) return { cost:f, label:txt };
+      return { cost:f * qty, label:txt };
+    }
+
+    function syncActiveButtons(key) {
+      const group = document.querySelector(`.seg[data-key="${key}"]`);
+      if (!group) return;
+      group.querySelectorAll('button[data-value]').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.value === state[key]);
+      });
+    }
+
+    function syncServiceRules() {
+      const isPhotostat = state.service === 'photostat';
+      const currentAllowed = allowedSizes[state.service];
+
+      document.querySelectorAll('.seg[data-key="size"] button[data-value]').forEach(btn => {
+        const show = currentAllowed.includes(btn.dataset.value);
+        btn.classList.toggle('hidden-size', !show);
+        btn.disabled = !show;
+      });
+
+      // Fotostat hanya A4/B5/A3. Kalau sebelum ini customer pilih A6/A5/B4/A3+, reset ke A4.
+      if (!currentAllowed.includes(state.size)) {
+        state.size = 'A4';
+        syncActiveButtons('size');
+      }
+
+      const materialRow = document.getElementById('materialRow');
+      const designRow = document.getElementById('designRow');
+      if (materialRow) materialRow.classList.toggle('hidden', isPhotostat);
+      if (designRow) designRow.classList.toggle('hidden', isPhotostat);
+
+      if (isPhotostat) {
+        state.material = '0';
+        const design = document.getElementById('design');
+        if (design) design.value = '0';
+        syncActiveButtons('material');
+      }
+    }
+
+    function isSmallDigitalSize() {
+      return state.service === 'digital' && (state.size === 'A6' || state.size === 'A5');
+    }
+
+    function getSizeNote(qty, sides, sideCount, mult, minimumApplied) {
+      if (state.service === 'photostat') {
+        return 'Fotostat hanya untuk dokumen A4/B5/A3. Untuk A6/A5, pilih Digital Print sebab perlu susun atas A4 dan potong.';
+      }
+      const minText = minimumApplied > 0 ? 'Minimum order RM10 digunakan.' : 'Minimum order RM10 untuk saiz kecil A6/A5 sahaja.';
+      if (state.size === 'A6') {
+        return `A6: anggaran 4 pcs atas 1 sheet A4. Kiraan = ${qty} pcs × ${sides} side = ${number(sideCount)} side. ${minText} Jika file belum susun, pilih “Susun simple A6/A5 atas A4” RM5.`;
+      }
+      if (state.size === 'A5') {
+        return `A5: anggaran 2 pcs atas 1 sheet A4. Kiraan = ${qty} pcs × ${sides} side = ${number(sideCount)} side. ${minText} Jika file belum susun, pilih “Susun simple A6/A5 atas A4” RM5.`;
+      }
+      return `Digital print saiz ${state.size}: tiada minimum order. Customer boleh print 1 pcs ikut harga semasa. Kiraan side = ${qty} pcs × ${sides} side = ${number(sideCount)} side. Multiplier saiz ${mult}×.`;
+    }
+
+    function calc() {
+      syncServiceRules();
+      const qty = Math.max(1, parseInt(document.getElementById('qty').value || '1', 10));
+      const sides = parseInt(state.sides, 10);
+      const sideCount = qty * sides;
+      const { promo, normal, mult } = getUnit(sideCount);
+      let rawPrint = promo * sideCount;
+      const minimumApplied = (isSmallDigitalSize() && rawPrint < 10) ? (10 - rawPrint) : 0;
+      const printSub = rawPrint + minimumApplied;
+      const materialUnit = state.service === 'digital' ? parseFloat(state.material || '0') : 0;
+      const matSub = materialUnit * qty * mult;
+      const finish = getFinishCost(qty, mult);
+      const designSub = state.service === 'digital' ? parseFloat(document.getElementById('design').value || '0') : 0;
+      const urgentRate = parseFloat(state.urgent || '0');
+      const urgentSub = (printSub + matSub + finish.cost) * urgentRate;
+      const total = printSub + matSub + finish.cost + urgentSub + designSub;
+      const normalPrint = normal * sideCount;
+      const normalMinimumApplied = (isSmallDigitalSize() && normalPrint < 10) ? (10 - normalPrint) : 0;
+      const normalTotal = normalPrint + normalMinimumApplied + matSub + finish.cost + urgentSub + designSub;
+      const saving = Math.max(0, normalTotal - total);
+      const noteLine = getSizeNote(qty, sides, sideCount, mult, minimumApplied);
+
+      document.getElementById('heroPrice').textContent = rm(total);
+      document.getElementById('total').textContent = rm(total);
+      document.getElementById('heroBadge').textContent = unitLabel(promo);
+      document.getElementById('heroDesc').textContent = `${serviceNames[state.service]} ${colorNames[state.color]} ${state.size}, ${number(sideCount)} side, ${state.service === 'digital' ? materialNames[state.material] : 'Simili 70gsm standard'}. ${minimumApplied > 0 ? 'Minimum order RM10 digunakan.' : 'Harga terus kira ikut tier promo.'}`;
+      document.getElementById('unitPrice').textContent = rm(promo);
+      document.getElementById('sideCount').textContent = number(sideCount);
+      document.getElementById('printSub').textContent = rm(printSub);
+      document.getElementById('matSub').textContent = rm(matSub);
+      document.getElementById('finishSub').textContent = rm(finish.cost);
+      document.getElementById('urgentSub').textContent = rm(urgentSub);
+      document.getElementById('designSub').textContent = rm(designSub);
+      document.getElementById('saveSub').textContent = saving > 0 ? rm(saving) : '—';
+      document.getElementById('totalNote').textContent = minimumApplied > 0 ? 'Minimum order RM10 untuk A6/A5 termasuk dalam subtotal print' : 'Termasuk harga print + add-on pilihan';
+      document.getElementById('qtyHint').textContent = state.service === 'digital'
+        ? (isSmallDigitalSize()
+          ? `A4 equivalent anggaran = ${number(qty * mult)} sheet. Kiraan side = ${number(sideCount)} side. Minimum RM10 hanya untuk A6/A5.`
+          : `Tiada minimum order untuk ${state.size}. Customer boleh print 1 pcs. Kiraan side = ${number(sideCount)} side.`)
+        : `Kiraan side = ${qty} pcs × ${sides} side = ${number(sideCount)} side.`;
+      document.getElementById('serviceHint').textContent = noteLine;
+
+      const note = document.getElementById('note').value.trim();
+      const designSelect = document.getElementById('design');
+      const designLbl = designSelect && designSelect.selectedOptions[0] ? designSelect.selectedOptions[0].textContent : '';
+      latestQuote =
+`*QUOTE ${serviceNames[state.service].toUpperCase()}*
+HGV Print House
+
+📐 Saiz: ${state.size} · ${colorNames[state.color]}
+🔢 Kuantiti: ${qty} pcs (${sideCount} side, ${sides} side/pc)
+🎨 Material: ${state.service === 'digital' ? materialNames[state.material] : 'Simili 70gsm'}${finish.cost > 0 ? '\n🔧 Finishing: '+finish.label : ''}${urgentSub > 0 ? '\n⏱️ Masa Siap: Urgent 24 jam (+30%)' : '\n⏱️ Masa Siap: Normal 2-3 hari'}${designSub > 0 ? '\n✏️ Design: '+designLbl : ''}${note ? '\n📝 Nota: '+note : ''}
+
+💰 *TOTAL: ${rm(total)}*
+
+_*Harga tertakluk kepada semakan file akhir. Masa siap dikira selepas payment & confirm order._`;
+    }
+
+    document.querySelectorAll('.seg').forEach(group => {
+      group.addEventListener('click', e => {
+        const btn = e.target.closest('button[data-value]');
+        if (!btn || btn.disabled) return;
+        group.querySelectorAll('button').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        state[group.dataset.key] = btn.dataset.value;
+        syncServiceRules();
+        calc();
+      });
+    });
+    document.getElementById('plus').addEventListener('click', () => {
+      const input = document.getElementById('qty'); input.value = Math.max(1, parseInt(input.value || '1',10)) + 1; calc();
+    });
+    document.getElementById('minus').addEventListener('click', () => {
+      const input = document.getElementById('qty'); input.value = Math.max(1, parseInt(input.value || '1',10) - 1); calc();
+    });
+    ['qty','design','finishing','note'].forEach(id => document.getElementById(id).addEventListener('input', calc));
+    ['design','finishing'].forEach(id => document.getElementById(id).addEventListener('change', calc));
+
+    function showToast(msg) {
+      const t = document.getElementById('toast'); t.textContent = msg; t.classList.add('show');
+      setTimeout(() => t.classList.remove('show'), 1800);
+    }
+    document.getElementById('copyBtn').addEventListener('click', async () => {
+      calc();
+      try { await navigator.clipboard.writeText(latestQuote); showToast('Quotation berjaya copy.'); }
+      catch(e) { prompt('Copy quotation:', latestQuote); }
+    });
+    document.getElementById('waBtn').addEventListener('click', () => {
+      calc();
+      window.open('https://wa.me/60195485227?text=' + encodeURIComponent(latestQuote), '_blank');
+    });
+    syncServiceRules();
+    calc();
+  </script>
+</body>
+</html>

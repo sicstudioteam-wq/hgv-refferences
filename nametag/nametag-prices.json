@@ -1,0 +1,138 @@
+[
+  {
+    "name": "Basic Nametag Pin",
+    "series": "Basic Series",
+    "size": "20x70mm / 25x75mm",
+    "urgentText": "Boleh urgent +RM10/order",
+    "urgentAllowed": true,
+    "prices": [
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5
+    ],
+    "image": "images/basic/1.jpg"
+  },
+  {
+    "name": "Basic Nametag Magnet",
+    "series": "Basic Series",
+    "size": "20x70mm / 25x75mm",
+    "urgentText": "Boleh urgent +RM10/order",
+    "urgentAllowed": true,
+    "prices": [
+      17,
+      16,
+      15,
+      14,
+      13.5,
+      13,
+      12.5
+    ],
+    "image": "images/basic/2.jpg"
+  },
+  {
+    "name": "Government Name Engrave Pin",
+    "series": "Government / Engrave Series",
+    "size": "25x75mm",
+    "urgentText": "Urgent ikut slot kerja +RM10/order",
+    "urgentAllowed": true,
+    "prices": [
+      15,
+      14,
+      13,
+      12,
+      11.5,
+      11,
+      10.5
+    ],
+    "image": "images/jata/1.jpg"
+  },
+  {
+    "name": "Government Name Engrave Magnet",
+    "series": "Government / Engrave Series",
+    "size": "25x75mm",
+    "urgentText": "Urgent ikut slot kerja +RM10/order",
+    "urgentAllowed": true,
+    "prices": [
+      20,
+      19,
+      18,
+      17,
+      16.5,
+      16,
+      15.5
+    ],
+    "image": "images/jata/2.jpg"
+  },
+  {
+    "name": "Premium Epoxy Pin",
+    "series": "Premium Epoxy Series",
+    "size": "25x75mm",
+    "urgentText": "Epoxy tidak boleh urgent",
+    "urgentAllowed": false,
+    "prices": [
+      20,
+      19,
+      18,
+      17,
+      16.5,
+      16,
+      15.5
+    ],
+    "image": "images/epoxy/1.jpg"
+  },
+  {
+    "name": "Premium Epoxy Magnet",
+    "series": "Premium Epoxy Series",
+    "size": "25x75mm",
+    "urgentText": "Epoxy tidak boleh urgent",
+    "urgentAllowed": false,
+    "prices": [
+      25,
+      24,
+      23,
+      22,
+      21.5,
+      21,
+      20.5
+    ],
+    "image": "images/epoxy/2.jpg"
+  },
+  {
+    "name": "Custom UV Print Nametag Pin",
+    "series": "Custom UV Print Series",
+    "size": "Ikut design",
+    "urgentText": "Urgent ikut slot kerja +RM10/order",
+    "urgentAllowed": true,
+    "prices": [
+      25,
+      24,
+      23,
+      22,
+      21.5,
+      21,
+      20.5
+    ],
+    "image": "images/uv/1.jpg"
+  },
+  {
+    "name": "Custom UV Print Nametag Magnet",
+    "series": "Custom UV Print Series",
+    "size": "Ikut design",
+    "urgentText": "Urgent ikut slot kerja +RM10/order",
+    "urgentAllowed": true,
+    "prices": [
+      30,
+      29,
+      28,
+      27,
+      26.5,
+      26,
+      25.5
+    ],
+    "image": "images/uv/2.jpg"
+  }
+]
