@@ -1,0 +1,122 @@
+name: Import HGV Reference Site
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/import-hgv-reference.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Mirror HGV public website
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          rm -rf _mirror
+          mkdir -p _mirror
+
+          wget \
+            --mirror \
+            --page-requisites \
+            --convert-links \
+            --adjust-extension \
+            --no-parent \
+            --execute robots=off \
+            --domains=hgvprint.com.my,www.hgvprint.com.my \
+            --directory-prefix=_mirror \
+            --no-host-directories \
+            --timeout=30 \
+            --tries=2 \
+            --user-agent="Mozilla/5.0 HGV-Reference-Mirror/1.0" \
+            https://hgvprint.com.my/
+
+          # Remove hosting/runtime files that are not part of the deployable website.
+          find _mirror -type d -name ".well-known" -prune -exec rm -rf {} + 2>/dev/null || true
+          find _mirror -type f \( \
+            -name ".ftpquota" -o \
+            -name ".htaccess" -o \
+            -name ".user.ini" -o \
+            -name "php.ini" -o \
+            -name "*.key" -o \
+            -name "*.pem" -o \
+            -name "*.p12" -o \
+            -name "*.pfx" \
+          \) -delete 2>/dev/null || true
+
+          # Do not publish internal/admin or source-backup artifacts.
+          find _mirror -type f \( \
+            -name "admin.html" -o \
+            -name "*backup*.html" -o \
+            -name "*.zip" -o \
+            -name "*.xlsx" -o \
+            -name "*.csv" \
+          \) -delete 2>/dev/null || true
+
+          # Replace previous mirrored website while preserving Git/GitHub automation.
+          find . -mindepth 1 -maxdepth 1 \
+            ! -name ".git" \
+            ! -name ".github" \
+            ! -name "_mirror" \
+            -exec rm -rf {} +
+
+          cp -a _mirror/. ./
+          rm -rf _mirror
+
+          cat > IMPORT_NOTES.md <<'EOF'
+          # HGV Reference Site
+
+          This repository is a sanitized reference mirror of the public HGV Print House website.
+
+          ## Excluded intentionally
+
+          The original uploaded hosting backup was inspected before this import. The following are intentionally excluded because they are hosting/runtime, sensitive, duplicate, backup, or internal artifacts and are not required for static deployment:
+
+          - cPanel / CageFS runtime data
+          - SSL certificates and private keys
+          - mail data and server logs
+          - .ftpquota
+          - .well-known certificate validation files
+          - .htaccess / PHP runtime configuration
+          - source ZIP backups
+          - admin.html / internal admin artifacts
+          - backup HTML files
+          - XLSX / CSV internal working files
+
+          Public website HTML, CSS, JSON and image assets are mirrored for reference/deployment.
+          EOF
+
+          printf "\nImported file count: "
+          find . -type f ! -path "./.git/*" ! -path "./.github/*" | wc -l
+          printf "Imported size: "
+          du -sh . --exclude=.git --exclude=.github
+
+      - name: Commit mirrored website
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          git config user.name "hgv-reference-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add -A
+
+          if git diff --cached --quiet; then
+            echo "No website changes to commit."
+            exit 0
+          fi
+
+          git commit -m "Import sanitized HGV reference website"
+          git push
