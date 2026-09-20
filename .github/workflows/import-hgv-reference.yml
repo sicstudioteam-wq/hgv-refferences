@@ -12,7 +12,7 @@ permissions:
   contents: write
 
 jobs:
-  import:
+  import-site:
     runs-on: ubuntu-latest
     timeout-minutes: 20
 
@@ -20,156 +20,29 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Download exact HGV ZIP manifest paths
+      - name: Build exact manifest
+        shell: bash
+        run: cat .github/hgv-zip-manifest.part*.txt > /tmp/hgv-manifest.txt
+
+      - name: Import sanitized HGV website
+        shell: bash
+        run: python3 .github/scripts/import_hgv.py /tmp/hgv-manifest.txt
+
+      - name: Show import summary
         shell: bash
         run: |
-          set -euo pipefail
-
-          cat .github/hgv-zip-manifest.part*.txt > /tmp/hgv-manifest.txt
-
-          # Replace previous mirrored website while preserving Git/GitHub metadata.
-          find . -mindepth 1 -maxdepth 1 \
-            ! -name ".git" \
-            ! -name ".github" \
-            -exec rm -rf {} +
-
-          python3 - <<'PY'
-          from pathlib import Path
-          from urllib.parse import quote
-          from urllib.request import Request, urlopen
-          from urllib.error import HTTPError, URLError
-          import mimetypes, time
-
-          manifest = Path("/tmp/hgv-manifest.txt")
-          paths = [line.strip() for line in manifest.read_text().splitlines() if line.strip()]
-
-          bases = [
-              "https://hgvprint.com.my",
-              "https://hgvprints.com",
-              "https://hgvprint.com",
-          ]
-
-          success = []
-          missing = []
-
-          def acceptable(path: str, content_type: str) -> bool:
-              ext = Path(path).suffix.lower()
-              ct = (content_type or "").lower()
-              if ext in {".webp", ".jpg", ".jpeg", ".png", ".gif", ".svg"}:
-                  return ct.startswith("image/")
-              if ext == ".html":
-                  return "text/html" in ct or "application/xhtml" in ct
-              if ext == ".css":
-                  return "text/css" in ct or "text/plain" in ct
-              if ext == ".json":
-                  return "json" in ct or "text/plain" in ct
-              if ext in {".xml"}:
-                  return "xml" in ct or "text/plain" in ct
-              if ext in {".txt"}:
-                  return "text/" in ct or not ct
-              return True
-
-          for i, rel in enumerate(paths, 1):
-              encoded = quote(rel, safe="/")
-              saved = False
-
-              for base in bases:
-                  url = f"{base}/{encoded}"
-                  req = Request(
-                      url,
-                      headers={
-                          "User-Agent": "Mozilla/5.0 HGV-Reference-Importer/2.0",
-                          "Accept": "*/*",
-                      },
-                  )
-
-                  try:
-                      with urlopen(req, timeout=20) as resp:
-                          data = resp.read()
-                          ct = resp.headers.get("Content-Type", "")
-                          if resp.status != 200 or not data or not acceptable(rel, ct):
-                              continue
-
-                          out = Path(rel)
-                          out.parent.mkdir(parents=True, exist_ok=True)
-                          out.write_bytes(data)
-                          success.append((rel, base, len(data)))
-                          saved = True
-                          break
-                  except (HTTPError, URLError, TimeoutError, OSError):
-                      continue
-
-              if not saved:
-                  missing.append(rel)
-
-              if i % 50 == 0:
-                  print(f"Processed {i}/{len(paths)} | success={len(success)} missing={len(missing)}", flush=True)
-
-          report = [
-              "# HGV Reference Import Report",
-              "",
-              f"Manifest files: {len(paths)}",
-              f"Downloaded: {len(success)}",
-              f"Missing: {len(missing)}",
-              "",
-              "## Missing files",
-              "",
-          ]
-          report += [f"- {p}" for p in missing] or ["- None"]
-          report += [
-              "",
-              "## Import sources",
-              "",
-              "- https://hgvprint.com.my",
-              "- https://hgvprints.com",
-              "- https://hgvprint.com",
-              "",
-              "The exact requested path list was generated from the sanitized uploaded HGV public_html backup.",
-              "",
-          ]
-          Path("IMPORT_REPORT.md").write_text("\n".join(report), encoding="utf-8")
-
-          notes = """# HGV Reference Site
-
-This repository contains the customer-facing HGV website reference set derived from the uploaded cPanel backup's `public_html` structure.
-
-## Intentionally excluded
-
-The uploaded backup was inspected before import. These were excluded because they are hosting/runtime, sensitive, duplicate, backup, internal, or unnecessary for static deployment:
-
-- cPanel / CageFS runtime data
-- SSL certificates and private keys
-- mail data and server logs
-- .ftpquota
-- .well-known certificate validation files
-- .htaccess / PHP runtime configuration
-- source ZIP backups
-- admin.html / internal admin artifacts
-- backup HTML files
-- XLSX / CSV internal working files
-- README/change-log text files
-
-The exact customer-facing manifest contains HTML, CSS, JSON, robots/sitemap and product/media assets.
-"""
-          Path("IMPORT_NOTES.md").write_text(notes, encoding="utf-8")
-
-          print(f"FINAL: manifest={len(paths)} downloaded={len(success)} missing={len(missing)}")
-          print(f"Downloaded bytes={sum(x[2] for x in success)}")
-          PY
-
-          printf "\nRepository file count after import: "
+          head -n 12 IMPORT_REPORT.md
+          echo "Website files:"
           find . -type f ! -path "./.git/*" ! -path "./.github/*" | wc -l
-          printf "Repository website size after import: "
+          echo "Website size:"
           du -sh . --exclude=.git --exclude=.github
 
       - name: Commit imported website
         shell: bash
         run: |
           set -euo pipefail
-
           git config user.name "hgv-reference-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
           git add -A
 
           if git diff --cached --quiet; then
